@@ -13,7 +13,9 @@
     border-radius: 10%;
     display: flex;
     flex-direction: column;
-    
+    animation-name: move ;
+    animation-duration: 1s ;
+ 
     p{
       color: rgba(0, 0, 0, 0.5);
       font-size: 15px;
@@ -47,7 +49,17 @@
         outline: none;
         font-size: 16px;
         padding: 10px;
+        
+
+        &:focus{
+          padding: 2px;
+          border: 1px solid #F4745850 ;
+        }
+      
       }
+   
+
+      
     }
     .button{
       display: flex;
@@ -80,4 +92,17 @@
   0%{color: #fff;}
   50%{color: #d94646;}
   100%{color: #F47458;}
+}
+
+@keyframes move{
+
+  from{
+    opacity: 0.5 ;
+    transform: translateY(-50%);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0%);
+
+  }
 }
